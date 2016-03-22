@@ -12,6 +12,15 @@ REPO="https://github.com/leocomelli/myenv.git"
 git clone --recursive $REPO ~/.myenv
 
 # dotfiles
+
+if [[ "$OSTYPE" =~ "cygwin" ]]; then
+	/usr/local/bin/babun shell /bin/bash
+
+	[ -f ~/.minttyrc ] && mv ~/.minttyrc ~/.minttyrc.backup
+	ln -s ~/.myenv/dotfiles/.minttyrc ~/.minttyrc
+	wget --quiet https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O /etc/bash_completion.d/git-completion	
+fi
+
 [ -f ~/.gitconfig ] && mv ~/.gitconfig ~/.gitconfig.backup
 ln -s ~/.myenv/dotfiles/.gitconfig ~/.gitconfig
 
@@ -29,12 +38,6 @@ ln -s ~/.myenv/dotfiles/.bash_profile ~/.bash_profile
 
 [ -f ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.backup
 ln -s ~/.myenv/dotfiles/.bashrc ~/.bashrc
-
-if [[ "$OSTYPE" =~ "cygwin" ]]; then
-	[ -f ~/.minttyrc ] && mv ~/.minttyrc ~/.minttyrc.backup
-	ln -s ~/.myenv/dotfiles/.minttyrc ~/.minttyrc
-	wget --quiet https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O /etc/bash_completion.d/git-completion	
-fi
 
 [ -f ~/.myenv/hacks/.git-prompt.sh ] && rm ~/.myenv/hacks/.git-prompt.sh
 wget --quiet https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O ~/.myenv/hacks/.git-prompt.sh
@@ -58,5 +61,7 @@ vim +BundleInstall +qall
 git clone https://github.com/huyng/bashmarks.git ~/.bashmarks
 cd ~/.bashmarks && make install
 rm -Rf ~/.bashmarks
+
+cd ~
 
 echo "Done! \o/"
