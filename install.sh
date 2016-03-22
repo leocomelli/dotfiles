@@ -31,6 +31,7 @@ ln -s ~/.myenv/dotfiles/.bash_profile ~/.bash_profile
 ln -s ~/.myenv/dotfiles/.bashrc ~/.bashrc
 
 if [[ "$OSTYPE" =~ "cygwin" ]]; then
+	[ -f ~/.minttyrc ] && mv ~/.minttyrc ~/.minttyrc.backup
 	ln -s ~/.myenv/dotfiles/.minttyrc ~/.minttyrc
 	wget --quiet https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O /etc/bash_completion.d/git-completion	
 fi
