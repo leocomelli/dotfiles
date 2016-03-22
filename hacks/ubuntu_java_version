@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -z "$JAVA_HOME" ]; then
+	echo "Invalid JAVA_HOME env"
+fi
+
+sudo update-alternatives --install /bin/java java $JAVA_HOME/bin/java 1
+sudo update-alternatives --set java $JAVA_HOME/bin/java
+sudo update-alternatives --install /bin/javac javac $JAVA_HOME/bin/javac 1
+sudo update-alternatives --set javac $JAVA_HOME/bin/javac
