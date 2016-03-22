@@ -12,11 +12,22 @@ REPO="https://github.com/leocomelli/myenv.git"
 git clone --recursive $REPO ~/.myenv
 
 # dotfiles
+[ -f ~/.gitconfig ] && mv ~/.gitconfig ~/.gitconfig.backup
 ln -s ~/.myenv/dotfiles/.gitconfig ~/.gitconfig
+
+[ -f ~/.gitignore ] && mv ~/.gitignore ~/.gitignore.backup
 ln -s ~/.myenv/dotfiles/.gitignore ~/.gitignore
+
+[ -f ~/.gemrc ] && mv ~/.gemrc ~/.gemrc.backup
 ln -s ~/.myenv/dotfiles/.gemrc ~/.gemrc
+
+[ -f ~/.tmux.conf ] && mv ~/.tmux.conf ~/.tmux.conf.backup
 ln -s ~/.myenv/dotfiles/.tmux.conf ~/.tmux.conf
+
+[ -f ~/.bash_profile ] && mv ~/.bash_profile ~/.bash_profile.backup
 ln -s ~/.myenv/dotfiles/.bash_profile ~/.bash_profile
+
+[ -f ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.backup
 ln -s ~/.myenv/dotfiles/.bashrc ~/.bashrc
 
 if [[ "$OSTYPE" =~ "cygwin" ]]; then
@@ -30,8 +41,10 @@ wget --quiet https://raw.githubusercontent.com/git/git/master/contrib/completion
 # vim
 [ -f /etc/vimrc ] && mv /etc/vimrc /etc/vimrc.backup
 
+[ -f ~/.vim ] && mv ~/.vim ~/.vim.backup
 ln -s ~/.myenv/vim ~/.vim
 
+[ -f ~/.vimrc ] && mv ~/.vimrc ~/.vimrc.backup
 ln -s ~/.myenv/vim/.vimrc ~/.vimrc
 
 if [[ "$OSTYPE" =~ "darwin" ]]; then
