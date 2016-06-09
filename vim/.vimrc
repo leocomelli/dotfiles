@@ -204,3 +204,5 @@ let g:NumberToggleTrigger="<C-l>"
 
 " Populate the g:airline_symbols dictionary
 let g:airline_powerline_fonts = 1
+
+set t_Co=256
