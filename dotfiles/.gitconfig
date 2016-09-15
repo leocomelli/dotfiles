@@ -56,18 +56,6 @@
     alast = !git last-files | awk 'match($1, /A/) {print $2}'
     dlast = !git last-files | awk 'match($1, /D/) {print $2}'
 
-    # `git done`
-    # current branch: merge, push, non-forced delete branch, show info
-    done = !sh -c '~/bin/done -d $1' -
-
-    # `git publish`
-    # current branch: merge, push, show info
-    publish = !sh -c '~/bin/done $1' -
-
-    # `git lint`
-    # lints all .php files that are different between current branch and origin/master
-    lint = !sh -c '~/bin/lint'
-
     # `git spawn my-new-branch`
     # make new branch based on master no matter which branch is checked out
     spawn = !sh -c 'git checkout -b $1 ${2-master} && git config branch.$1.localmerge ${2-master}' - 

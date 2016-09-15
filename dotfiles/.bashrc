@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source ~/.myenv/scripts/export
-source ~/.myenv/scripts/alias
-source ~/.myenv/hacks/.git-prompt.sh
-source ~/.local/bin/bashmarks.sh
+source ~/.bash/export
+source ~/.bash/alias
+source ~/.bash/bash_completion
+source ~/.bash/git_prompt
+source ~/.bash/docker_completion

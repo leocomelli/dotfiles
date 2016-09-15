@@ -1,44 +1,35 @@
-" Must come first because it changes other options.
 set nocompatible
+filetype off
 
-" Vundle setup
-filetype off " required by Vundle 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" My bundles from GitHub
-Plugin 'tpope/vim-fugitive'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-rails'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mattn/emmet-vim'
-Plugin 'honza/vim-snippets'
-Plugin 'tpope/vim-repeat'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-markdown'
-Plugin 'klen/python-mode'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'ekalinin/dockerfile.vim'
+Plugin 'tpope/vim-repeat'
 Plugin 'fatih/vim-go'
-Plugin 't9md/vim-chef'
-Plugin 'chase/vim-ansible-yaml'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'zenorocha/dracula-theme'
+Plugin 'ekalinin/dockerfile.vim'
+Plugin 'dracula/vim'
+Plugin 'tpope/vim-surround'
 
-filetype plugin indent on " required by Vundle 
-
-" Other configurations...
+call vundle#end()
+filetype plugin indent on
 
 " Enable syntax highlighting
 syntax on
+
+" Theme
+"color dracula
 
 " Load the matchit plugin.
 runtime macros/matchit.vim
@@ -63,8 +54,10 @@ set ignorecase
 " But case-sensitive if expression contains a capital letter.
 set smartcase
 
-" Show line numbers.
+" Show current line number
 set number
+" Show relative line numbers
+set relativenumber
 " Show cursor position.
 set ruler
 
@@ -105,7 +98,7 @@ set laststatus=2
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 " Leader = ,
-let mapleader = ","
+let mapleader = "\\"
 
 " Tab mappings.
 nnoremap <leader>t :tabnew<cr>
@@ -142,6 +135,8 @@ nnoremap <leader>hs :set hlsearch!<cr>
 
 " Toggles NERDtree
 map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 " Maps <C-C> to <esc>
 noremap <C-C> <esc>
