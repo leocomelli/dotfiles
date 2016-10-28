@@ -1,11 +1,6 @@
 #!/bin/bash
 
-if [[ "$OSTYPE" =~ "darwin" ]]; then
-	MYHOME=/Users/leocomelli
-elif [[ "$OSTYPE" =~ "linux-gnu" ]]; then
-	# windows 10 bash
-	MYHOME=/mnt/c/Users/comelli
-fi
+MYHOME=${HOME:-/Users/leocomelli}
 
 # Make VIM the default editor
 export EDITOR="vim"
