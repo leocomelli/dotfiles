@@ -1,6 +1,8 @@
 #!/bin/bash
 
 MYHOME=${HOME:-/Users/leocomelli}
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+CREDENTIALS_FILE="$DIR/credentials"
 
 # Make VIM the default editor
 export EDITOR="vim"
@@ -24,5 +26,36 @@ export CLICOLOR="auto"
 # Always use color output for `ls`
 export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
 
+# golang
+if [ -x "$(command -v go)" ]; then
+  export GOPATH=$HOME/go
+  PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+fi
+
+# maven
+if [ -x "$(command -v mvn)" ]; then
+  export M2_HOME=/home/leonardo/dev/tools/maven
+  PATH=$PATH:$M2_HOME/bin
+fi
+
+# rbenv
+if [ -x "$(command -v rbenv)" ]; then
+  PATH=$PATH:$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin
+  eval "$(rbenv init -)"
+fi
+
+# credentials
+if [ -f "$CREDENTIALS_FILE" ]; then
+  . $CREDENTIALS_FILE
+fi
+
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin:~/.bash/hacks
-export PS1='[\[\e[36m\]\u] \[\e[33m\]\W \[\e[32m\]$(__git_ps1)\[\e[0m\]$ '
+
+# powerline shell
+function _update_ps1() {
+    PS1="$(~/.bash/powerline-shell/powerline-shell.py $? 2> /dev/null)"
+}
+
+if [ "$TERM" != "linux" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi

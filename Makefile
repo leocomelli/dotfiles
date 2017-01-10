@@ -34,5 +34,11 @@ install-vim:
 	rm -rf ~/.vim
 	cp -Rf `pwd`/vim ~/.vim
 	ln -s ~/.vim/.vimrc ~/.vimrc
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	git clone git@github.com:VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	vim +BundleInstall +qall
+
+install-powerline:
+	rm -rf ~/.bash/powerline-shell
+	git clone git@github.com:banga/powerline-shell.git ~/.bash/powerline-shell
+	python ~/.bash/powerline-shell/install.py
+
