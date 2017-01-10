@@ -39,7 +39,7 @@ if [ -x "$(command -v mvn)" ]; then
 fi
 
 # rbenv
-if [ -x "$(command -v rbenv)" ]; then
+if [ -x "$(command -v $HOME/.rbenv/bin/rbenv)" ]; then
   PATH=$PATH:$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin
   eval "$(rbenv init -)"
 fi
