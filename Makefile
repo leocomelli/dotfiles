@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-install: install-bash install-vim
+install: install-bash install-vim install-powerline
 
 clean:
 	rm -rf ~/.bash
@@ -40,5 +40,5 @@ install-vim:
 install-powerline:
 	rm -rf ~/.bash/powerline-shell
 	git clone git@github.com:banga/powerline-shell.git ~/.bash/powerline-shell
-	python ~/.bash/powerline-shell/install.py
+	cd ~/.bash/powerline-shell; python install.py
 
