@@ -1,7 +1,7 @@
 [user]
   name = Leonardo Comelli
   email = leonardo.comelli@gmail.com
-  signingkey = 8EDD1D2DEA1E03E7FFDD93624913E56B76320DEB
+  signingkey = 22B782F008E40BAD2EEBAFD39B11E93BF1096C3E
 
 [credential]
   helper = osxkeychain
@@ -35,7 +35,7 @@
   user = leocomelli
 
 [gpg]
-  program = /usr/local/bin/gpg
+  program = gpg
 
 [help]
   autocorrect = 1
