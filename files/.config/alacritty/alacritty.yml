@@ -15,14 +15,11 @@ scrolling:
 
 font:
   normal:
-    family: JetBrains Mono
-    style: Regular
+    family: "Fira Code"
+    style: Light
   bold:
-    family: JetBrains Mono
-    style: Bold
-  italic:
-    family: JetBrains Mono
-    style: Italic
+    family: "Fira Code"
+    style: SemiBold
   size: 15
 
 debug:
