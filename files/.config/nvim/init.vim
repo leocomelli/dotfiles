@@ -50,13 +50,10 @@ set rtp+=~/.vim/plugged/Vundle.vim
 call vundle#begin('~/.vim/plugged')
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
+Plugin 'dracula/vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
-" python3 -m pip install --user --upgrade pynvim
-" :call coc#util#install()
-" :CocInstall coc-snippets
-"Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'mbbill/undotree'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
@@ -85,7 +82,7 @@ call vundle#end()
 filetype plugin indent on
 
 " Theme
-colorscheme gruvbox
+colorscheme dracula
 set background=dark
 
 let g:airline_powerline_fonts = 1
