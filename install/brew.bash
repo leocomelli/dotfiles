@@ -8,15 +8,15 @@ if ! [ -x "$(command -v brew)" ]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 brew upgrade
 brew update
 
 recipes=(
   ansible
   awscli
-  aws-sam-cli
   bash
-  git
   git-extras
   git-crypt
   gnu-getopt
@@ -62,9 +62,6 @@ recipes=(
 
 casks=(
   alacritty
-  docker
-  dropbox
-  font-jetbrains-mono
   google-cloud-sdk
   ngrok
   raycast
