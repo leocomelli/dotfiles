@@ -1,3 +1,7 @@
+# Path
+fish_add_path /usr/local/opt/libpq/bin
+fish_add_path /opt/homebrew/bin
+
 # git prompt settings
 set -g __fish_git_prompt_show_informative_status 1
 set -g __fish_git_prompt_showdirtystate "yes"
@@ -52,10 +56,7 @@ if test -f ~/.config/fish/private.fish
 end
 
 # asdf configuration
-source /usr/local/opt/asdf/libexec/asdf.fish
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc' ]; . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc'; end
-
-# Path
-fish_add_path /usr/local/opt/libpq/bin
