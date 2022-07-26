@@ -1,0 +1,63 @@
+[user]
+  name = Leonardo Comelli
+  email = leonardo.comelli@gmail.com
+  signingkey = 8EDD1D2DEA1E03E7FFDD93624913E56B76320DEB
+
+[credential]
+  helper = osxkeychain
+
+[core]
+  excludesfile = ~/.gitignore
+  whitespace = trailing-space,space-before-tab
+  autocrlf = input
+  pager = less -+$LESS -RS
+  editor = nvim
+
+[apply]
+  whitespace = fix
+
+[commit]
+  gpgsign = true
+
+[merge]
+  ff = false
+
+[rebase]
+  autosquash = true
+
+[pull]
+  rebase = true
+
+[push]
+  default = simple
+
+[github]
+  user = leocomelli
+
+[gpg]
+  program = /usr/local/bin/gpg
+
+[help]
+  autocorrect = 1
+
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+
+[color]
+  ui = true
+  interactive = true
+  status = true
+  branch = true
+  diff = true
+
+[alias]
+  aliases = config --get-regexp alias
+  st = status
+  co = checkout
+  ci = commit
+  cs = commit -S
+  br = branch
+  df = diff
+  rso = remote show origin
+  s = switch
+
