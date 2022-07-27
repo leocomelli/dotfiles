@@ -51,8 +51,9 @@ status --is-interactive; and source (jump shell fish | psub)
 
 # Senstive functions which are not pushed to Github
 # It contains work related stuff, some functions, aliases etc...
-if test -f ~/.config/fish/private.fish
-  source ~/.config/fish/private.fish
+set -g PVT_FILE ~/Library/Mobile\ Documents/com~apple~CloudDocs/workspace/private.fish
+if test -f $PVT_FILE
+  source $PVT_FILE
 end
 
 # asdf configuration
