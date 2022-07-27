@@ -150,7 +150,7 @@ cursor:
 live_config_reload: true
 
 shell:
-  program: tmux
+  program: /opt/homebrew/bin/tmux
   args:
     - new-session
     - -A
