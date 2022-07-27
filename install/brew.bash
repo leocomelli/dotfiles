@@ -69,6 +69,7 @@ casks=(
   slack
   spotify
   stats
+  logseq
 )
 
 # Given strings containing space-delimited words A and B, "setdiff A B" will
