@@ -20,7 +20,7 @@ font:
   bold:
     family: "Fira Code"
     style: SemiBold
-  size: 15
+  size: 18
 
 debug:
   render_timer: false
