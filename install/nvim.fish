@@ -13,7 +13,3 @@ python3 -m pip install --user --upgrade pynvim
 
 vim +PluginInstall +qall
 
-# nvim +PluginInstall +call coc#util#install() +CocInstall coc-snippets +qall
-
-# $SHELL -c cd ~/.vim/plugged/coc.nvim/ && yarn install
-
