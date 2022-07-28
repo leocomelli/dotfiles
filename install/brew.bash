@@ -38,8 +38,6 @@ recipes=(
   fish
   gh
   kustomize
-  terraform
-  terragrunt
   tflint
   vault
   neovim
