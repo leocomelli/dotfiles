@@ -1,6 +1,7 @@
 # Path
 fish_add_path /usr/local/opt/libpq/bin
 fish_add_path /opt/homebrew/bin
+fish_add_path ~/Library/Python/3.9/bin/
 
 # git prompt settings
 set -g __fish_git_prompt_show_informative_status 1
