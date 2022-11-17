@@ -1,5 +1,5 @@
 # Path
-fish_add_path /usr/local/opt/libpq/bin
+fish_add_path /opt/homebrew/opt/libpq/bin
 fish_add_path /opt/homebrew/bin
 fish_add_path ~/Library/Python/3.9/bin/
 
