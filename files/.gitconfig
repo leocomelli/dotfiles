@@ -1,8 +1,3 @@
-[user]
-  name = Leonardo Comelli
-  email = leonardo.comelli@gmail.com
-  signingkey = 22B782F008E40BAD2EEBAFD39B11E93BF1096C3E
-
 [credential]
   helper = osxkeychain
 
@@ -61,3 +56,8 @@
   rso = remote show origin
   s = switch
 
+[include]
+  path = ~/.gitconfig.personal
+
+[includeIf "gitdir:~/dev/realsure/"]
+  path = ~/.gitconfig.rs
