@@ -78,6 +78,7 @@ Plugin 'elixir-editors/vim-elixir'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'liuchengxu/vim-which-key'
 Plugin 'preservim/tagbar'
+Plugin 'github/copilot.vim'
 call vundle#end()
 filetype plugin indent on
 
