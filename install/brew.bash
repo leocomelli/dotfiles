@@ -56,6 +56,7 @@ recipes=(
   the_silver_searcher
   wrk
   shellcheck
+  terrascan
 )
 
 casks=(
