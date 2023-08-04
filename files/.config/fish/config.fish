@@ -38,10 +38,26 @@ alias repo "gh repo view --web"
 alias k kubectl
 alias v vault
 alias tf terraform
+
 # don"t show any greetings
 set fish_greeting ""
 
 set -x GPG_TTY (tty)
+
+# terraform
+set -gx TF_PLUGIN_CACHE_DIR ~/.terraform.d/plugin-cache
+mkdir -p $TF_PLUGIN_CACHE_DIR
+
+# go
+set -gx GOPATH $HOME/dev/go
+set -gxp PATH $GOPATH/bin
+
+# 1password
+if not test -e "$HOME/.op-env"
+  eval $(op signin)
+  source "$HOME/.config/fish/functions/op-env.fish" > "$HOME/.op-env"
+end
+source "$HOME/.op-env"
 
 # don"t describe the command for darwin
 # https://github.com/fish-shell/fish-shell/issues/6270
@@ -49,13 +65,6 @@ function __fish_describe_command; end
 
 # brew install jump, https://github.com/gsamokovarov/jump
 status --is-interactive; and source (jump shell fish | psub)
-
-# Senstive functions which are not pushed to Github
-# It contains work related stuff, some functions, aliases etc...
-set -g PVT_FILE ~/Library/Mobile\ Documents/com~apple~CloudDocs/workspace/private.fish
-if test -f $PVT_FILE
-  source $PVT_FILE
-end
 
 # asdf configuration
 source /opt/homebrew/opt/asdf/libexec/asdf.fish

@@ -69,6 +69,7 @@ casks=(
   spotify
   stats
   logseq
+  1password/tap/1password-cli
 )
 
 # Given strings containing space-delimited words A and B, "setdiff A B" will
