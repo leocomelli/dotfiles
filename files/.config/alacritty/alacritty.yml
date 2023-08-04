@@ -15,10 +15,10 @@ scrolling:
 
 font:
   normal:
-    family: "Fira Code"
-    style: Light
+    family: "JetBrainsMono Nerd Font"
+    style: Regular
   bold:
-    family: "Fira Code"
+    family: "JetBrainsMono Nerd Font"
     style: SemiBold
   size: 18
 
@@ -28,53 +28,53 @@ debug:
 schemes:
   gruvbox_light: &gruvbox_light
     primary:
-      background: '0xf9f5d7' # hard contrast
-      foreground: '0x3c3836'
+      background: "0xf9f5d7" # hard contrast
+      foreground: "0x3c3836"
     normal:
-      black:   '0xfbf1c7'
-      red:     '0xcc241d'
-      green:   '0x98971a'
-      yellow:  '0xd79921'
-      blue:    '0x458588'
-      magenta: '0xb16286'
-      cyan:    '0x689d6a'
-      white:   '0x7c6f64'
+      black: "0xfbf1c7"
+      red: "0xcc241d"
+      green: "0x98971a"
+      yellow: "0xd79921"
+      blue: "0x458588"
+      magenta: "0xb16286"
+      cyan: "0x689d6a"
+      white: "0x7c6f64"
     bright:
-      black:   '0x928374'
-      red:     '0x9d0006'
-      green:   '0x79740e'
-      yellow:  '0xb57614'
-      blue:    '0x076678'
-      magenta: '0x8f3f71'
-      cyan:    '0x427b58'
-      white:   '0x3c3836'
+      black: "0x928374"
+      red: "0x9d0006"
+      green: "0x79740e"
+      yellow: "0xb57614"
+      blue: "0x076678"
+      magenta: "0x8f3f71"
+      cyan: "0x427b58"
+      white: "0x3c3836"
   gruvbox_dark: &gruvbox_dark
     primary:
-      background: '0x1d2021' # hard contrast
-      foreground: '0xebdbb2'
+      background: "0x1d2021" # hard contrast
+      foreground: "0xebdbb2"
     normal:
-      black:   '0x282828'
-      red:     '0xcc241d'
-      green:   '0x98971a'
-      yellow:  '0xd79921'
-      blue:    '0x458588'
-      magenta: '0xb16286'
-      cyan:    '0x689d6a'
-      white:   '0xa89984'
+      black: "0x282828"
+      red: "0xcc241d"
+      green: "0x98971a"
+      yellow: "0xd79921"
+      blue: "0x458588"
+      magenta: "0xb16286"
+      cyan: "0x689d6a"
+      white: "0xa89984"
     bright:
-      black:   '0x928374'
-      red:     '0xfb4934'
-      green:   '0xb8bb26'
-      yellow:  '0xfabd2f'
-      blue:    '0x83a598'
-      magenta: '0xd3869b'
-      cyan:    '0x8ec07c'
-      white:   '0xebdbb2'
+      black: "0x928374"
+      red: "0xfb4934"
+      green: "0xb8bb26"
+      yellow: "0xfabd2f"
+      blue: "0x83a598"
+      magenta: "0xd3869b"
+      cyan: "0x8ec07c"
+      white: "0xebdbb2"
   dracula: &dracula
     primary:
-      background: '#282a36'
-      foreground: '#f8f8f2'
-      bright_foreground: '#ffffff'
+      background: "#282a36"
+      foreground: "#f8f8f2"
+      bright_foreground: "#ffffff"
     cursor:
       text: CellBackground
       cursor: CellForeground
@@ -83,45 +83,45 @@ schemes:
       cursor: CellForeground
     search:
       matches:
-        foreground: '#44475a'
-        background: '#50fa7b'
+        foreground: "#44475a"
+        background: "#50fa7b"
       focused_match:
-        foreground: '#44475a'
-        background: '#ffb86c'
+        foreground: "#44475a"
+        background: "#ffb86c"
     footer_bar:
-      background: '#282a36'
-      foreground: '#f8f8f2'
+      background: "#282a36"
+      foreground: "#f8f8f2"
     hints:
       start:
-        foreground: '#282a36'
-        background: '#f1fa8c'
+        foreground: "#282a36"
+        background: "#f1fa8c"
       end:
-        foreground: '#f1fa8c'
-        background: '#282a36'
+        foreground: "#f1fa8c"
+        background: "#282a36"
     line_indicator:
       foreground: None
       background: None
     selection:
       text: CellForeground
-      background: '#44475a'
+      background: "#44475a"
     normal:
-      black: '#21222c'
-      red: '#ff5555'
-      green: '#50fa7b'
-      yellow: '#f1fa8c'
-      blue: '#bd93f9'
-      magenta: '#ff79c6'
-      cyan: '#8be9fd'
-      white: '#f8f8f2'
+      black: "#21222c"
+      red: "#ff5555"
+      green: "#50fa7b"
+      yellow: "#f1fa8c"
+      blue: "#bd93f9"
+      magenta: "#ff79c6"
+      cyan: "#8be9fd"
+      white: "#f8f8f2"
     bright:
-      black: '#6272a4'
-      red: '#ff6e6e'
-      green: '#69ff94'
-      yellow: '#ffffa5'
-      blue: '#d6acff'
-      magenta: '#ff92df'
-      cyan: '#a4ffff'
-      white: '#ffffff'
+      black: "#6272a4"
+      red: "#ff6e6e"
+      green: "#69ff94"
+      yellow: "#ffffa5"
+      blue: "#d6acff"
+      magenta: "#ff92df"
+      cyan: "#a4ffff"
+      white: "#ffffff"
 
 colors: *dracula
 
@@ -140,7 +140,7 @@ mouse:
   hide_when_typing: true
 
 selection:
-  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
   save_to_clipboard: true
 
 cursor:
@@ -168,12 +168,11 @@ key_bindings:
   - { key: L, mods: Control|Shift|Alt, action: DecreaseFontSize }
   - { key: Space, mods: Control, chars: "\x00" }
   - { key: Space, mods: Shift|Control, action: None }
-  - { key: Left,     mods: Shift,   chars: "\x1b[1;2D"                   }
-  - { key: Left,     mods: Alt,     chars: "\x1b[1;3D"                   }
-  - { key: Left,                    chars: "\x1b[D",   mode: ~AppCursor  }
-  - { key: Left,                    chars: "\x1bOD",   mode: AppCursor   }
-  - { key: Right,    mods: Shift,   chars: "\x1b[1;2C"                   }
-  - { key: Right,    mods: Alt,     chars: "\x1b[1;3C"                   }
-  - { key: Right,                   chars: "\x1b[C",   mode: ~AppCursor  }
-  - { key: Right,                   chars: "\x1bOC",   mode: AppCursor   }
-
+  - { key: Left, mods: Shift, chars: "\x1b[1;2D" }
+  - { key: Left, mods: Alt, chars: "\x1b[1;3D" }
+  - { key: Left, chars: "\x1b[D", mode: ~AppCursor }
+  - { key: Left, chars: "\x1bOD", mode: AppCursor }
+  - { key: Right, mods: Shift, chars: "\x1b[1;2C" }
+  - { key: Right, mods: Alt, chars: "\x1b[1;3C" }
+  - { key: Right, chars: "\x1b[C", mode: ~AppCursor }
+  - { key: Right, chars: "\x1bOC", mode: AppCursor }
