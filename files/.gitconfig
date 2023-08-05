@@ -59,5 +59,8 @@
 [include]
   path = ~/.gitconfig.personal
 
-[includeIf "gitdir:~/dev/realsure/"]
-  path = ~/.gitconfig.rs
+[includeIf "gitdir:~/dev/itera/"]
+  path = ~/.gitconfig.itera
+
+[includeIf "gitdir:~/dev/splife/"]
+  path = ~/.gitconfig.splife
