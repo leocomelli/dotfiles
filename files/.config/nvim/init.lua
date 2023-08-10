@@ -1,7 +1,7 @@
 require("lc.plugins-setup")
 require("lc.core.options")
 require("lc.core.keymaps")
--- require("lc.core.colorscheme")
+
 require("lc.plugins.onedark")
 require("lc.plugins.comment")
 require("lc.plugins.nvim-tree")
@@ -17,3 +17,4 @@ require("lc.plugins.lsp.lspconfig")
 require("lc.plugins.lsp.null-ls")
 require("lc.plugins.blankline")
 require("lc.plugins.whichkey")
+require("lc.plugins.copilot")

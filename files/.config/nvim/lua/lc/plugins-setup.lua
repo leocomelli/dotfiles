@@ -106,6 +106,9 @@ return packer.startup(function(use)
 
 	use("folke/which-key.nvim")
 
+	-- copilot
+	use("github/copilot.vim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
