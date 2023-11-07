@@ -112,3 +112,15 @@ lspconfig["lua_ls"].setup({
 		},
 	},
 })
+
+-- configure golang server
+lspconfig["gopls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+-- configure ruby ls
+lspconfig["ruby_ls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
