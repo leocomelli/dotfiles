@@ -28,3 +28,26 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 -- git messenger
 keymap.set("n", "<leader>gm", ":GitMessenger<cr>", { desc = "[G]it [M]essenger", silent = true, noremap = true })
 keymap.set("n", "<leader>gdv", ":DiffviewOpen<cr>", { desc = "[G]it [D]iff [V]iew", silent = true, noremap = true })
+
+-- cellular automation
+keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
+
+-- trouble
+keymap.set("n", "<leader>xx", function()
+	require("trouble").toggle()
+end)
+keymap.set("n", "<leader>xw", function()
+	require("trouble").toggle("workspace_diagnostics")
+end)
+keymap.set("n", "<leader>xd", function()
+	require("trouble").toggle("document_diagnostics")
+end)
+keymap.set("n", "<leader>xq", function()
+	require("trouble").toggle("quickfix")
+end)
+keymap.set("n", "<leader>xl", function()
+	require("trouble").toggle("loclist")
+end)
+keymap.set("n", "gR", function()
+	require("trouble").toggle("lsp_references")
+end)

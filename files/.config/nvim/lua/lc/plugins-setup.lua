@@ -110,6 +110,10 @@ return packer.startup(function(use)
 	-- copilot
 	use("github/copilot.vim")
 
+	use("eandrju/cellular-automaton.nvim")
+
+	use("folke/trouble.nvim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
