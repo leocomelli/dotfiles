@@ -127,12 +127,6 @@ lspconfig["ruby_ls"].setup({
 
 -- configure solargraph
 lspconfig["solargraph"].setup({
-	settings = {
-		solargraph = {
-			completion = true,
-			diagnostic = true,
-		},
-	},
-
+	capabilities = capabilities,
 	on_attach = on_attach,
 })
